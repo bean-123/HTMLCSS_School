@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Lisää aina css alkuun!
+Lisäämällä * alkuun se tarkoittaa että se on universaali*/
+
+body {
+  background-color: lightblue;
+}
+
+header {
+  background: pink;
+  padding: 25px;
+  color: darkred;
+}
+
+/*Backroundcolor määrittää vain taustavärin
+Backround määrittää tausta ominaisuuksia
+Color määrittää tekstin väriä*/
+
+main {
+  padding: 10px;
+}
+/*Antaa kaikille diveille padding koska divit on laitettu main sectioniin html koodissa*/
+
+div {
+  background: peachpuff;
+  height: 200px;
+  width: 200px;
+  margin: 0 10px 10px 0;
+  display: inline-block;
+}
+
+/*Lisätään margin vaan oikealle ja alas koska meillä on jo laitettu tilaa muualle headerissa sekä mainissa
+ei haluta että sinne tulee 10px + 10px minnekkään vaan että kaikkialla on tasainen 10px */
+
+.box1 {
+  border: 5px dotted white;
+  text-align: center;
+}
+
+.box2 {
+  border: 7px double red;
+  background-color: lightcoral;
+  text-align: center;
+}
+
+.box3 {
+  border-style: groove;
+  border-width: 10px;
+  border-color: orange black yellow;
+  text-align: center;
+}
+
+.box4 {
+  border-style: ridge;
+  border-width: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.box5 {
+  border: 5px groove darkgreen;
+  border-radius: 12px;
+  padding: 5px;
+}
+
+/*Luokka eli class valitaan css:ssä pisteellä nimen edessä .nimi*/
+/*Border radius tekee siitä pyöreän tai kulmikkaan*/
+/*Lisää borders https://www.w3schools.com/css/css_border.asp*/

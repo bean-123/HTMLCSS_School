@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Stack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nova+Mono&family=Poppins:ital,wght@0,200;0,300;0,400;0,700;1,100&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="index.html"><img src="/Images/logo.png" alt="logo" /></a>
+        <div class="navLinks" id="navLinks">
+          <i class="fa fa-times" onClick="hideMenu()"></i>
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">COURSE</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+
+      <div class="textBox">
+        <h1>Become a Full-Stack Web Developer</h1>
+        <p>
+          This course will introduce you to modern JavaScript-based web
+          development. The main focus is on building single page applications
+          with ReactJS that use REST APIs built with Node.js<br />
+          On Other courses you will learn to use various tools and technologies.
+        </p>
+        <a href="" class="heroBTN">Apply Now</a>
+      </div>
+    </section>
+
+    <!--------------------COURSE SECTION------------------>
+
+    <section class="course">
+      <h1>Courses we offer</h1>
+      <p>
+        Learn modern web development and start your career in tech. <br />
+        We offer coding languages from intermediate to advanced !
+      </p>
+      <div class="row">
+        <div class="courseCol">
+          <h3>Beginner</h3>
+          <p>HTML/CSS, Python, Ruby, JavaScript</p>
+        </div>
+        <div class="courseCol">
+          <h3>intermediate</h3>
+          <p>C#, Swift, PHP, Go, Kotlin</p>
+        </div>
+        <div class="courseCol">
+          <h3>Advanced</h3>
+          <p>Java, C++, RUST</p>
+        </div>
+      </div>
+    </section>
+
+    <!------------------MORE ABOUT COURSES----------------->
+    <section class="moreAbout">
+      <h1>More info about our courses</h1>
+      <p>Indepth description what we offer in our courses.</p>
+
+      <div class="row">
+        <div class="aboutCol">
+          <img src="/Images/python.avif" />
+          <div class="layer">
+            <h3>More about our <strong>beginner</strong> courses</h3>
+          </div>
+        </div>
+        <div class="aboutCol">
+          <img src="/Images/php.png" />
+          <div class="layer">
+            <h3>More about <strong>intermediate</strong> courses</h3>
+          </div>
+        </div>
+        <div class="aboutCol">
+          <img src="/Images/java.png" />
+          <div class="layer">
+            <h3>More about our <strong>advanced</strong> courses</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----------------------FOOTER----------------------->
+    <section class="footer">
+      <h4>About us</h4>
+      <p>Rautatieläisenkatu 5, 00520 Helsinki</p>
+      <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-linkedin"></i>
+      </div>
+      <p>Made with <i class="fa fa-heart-o"></i> by Amy</p>
+    </section>
+
+    <!--------OUR SCRIPT TO SHOW THE MENU ON SMALL SCREEN-------->
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>

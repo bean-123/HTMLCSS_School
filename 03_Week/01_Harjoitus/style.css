@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: orange;
+  background-image: linear-gradient(pink, whitesmoke);
+  padding: 20px;
+  text-align: center;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.first {
+  font-family: "Exo 2", sans-serif;
+  color: orange;
+  padding: 20px;
+  text-align: center;
+}
+
+section {
+  margin-top: 50px;
+  text-align: center;
+  background-image: radial-gradient(circle, whitesmoke, pink, whitesmoke);
+  padding: 25px;
+}
+
+nav ul {
+  background-color: pink;
+  display: flex;
+  gap: 2em;
+  list-style-type: none;
+  float: right;
+}
+
+a:link {
+  color: red;
+}
+
+a:hover {
+  color: darkcyan;
+}
