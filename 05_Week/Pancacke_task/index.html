@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pancake Factory</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="container">
+    <!-- Image Section -->
+    <div class="image-section">
+      <img src="pancake.jpg" alt="Pancake" />
+      <div class="price-tag" id="totalPrice">5€</div>
+    </div>
+
+    <!-- Form Section -->
+    <section class="form-container">
+      <div>
+        <h2>Build Your Pancake</h2>
+        <p>
+          Create your dream pancake combo — mix, match, and make it yours. Made with <strong>love</strong> just for you !<br><br>
+          Try our <a href="#">Classic</a>, <a href="#">Chocolate</a>, or <a href="#">Red Velvet</a>.
+        </p>
+
+        <!-- Custom Dropdown -->
+        <div class="dropdown">
+          <div class="dropdown-selected">Choose pancake type</div>
+          <div class="dropdown-options">
+            <div class="dropdown-option" data-value="5">
+              <span class="name">Classic</span>
+              <span class="price">+ 5,00 €</span>
+            </div>
+            <div class="dropdown-option" data-value="6">
+              <span class="name">Chocolate</span>
+              <span class="price">+ 6,00 €</span>
+            </div>
+            <div class="dropdown-option" data-value="7">
+              <span class="name">Red Velvet</span>
+              <span class="price">+ 7,00 €</span>
+            </div>
+          </div>
+          <input type="hidden" name="type" id="type" />
+        </div>
+
+        <!-- Toppings -->
+        <h3>Toppings :</h3>
+        <label class="topping">
+          <input type="checkbox" class="topping-checkbox" />
+          <span class="text">
+            <span class="name">Nuts</span>
+            <span class="price">+ 1,00 €</span>
+          </span>
+        </label>
+        <label class="topping">
+          <input type="checkbox" class="topping-checkbox" />
+          <span class="text">
+            <span class="name">Banana</span>
+            <span class="price">+ 1,00 €</span>
+          </span>
+        </label>
+        <label class="topping">
+          <input type="checkbox" class="topping-checkbox" />
+          <span class="text">
+            <span class="name">Syrup</span>
+            <span class="price">+ 1,00 €</span>
+          </span>
+        </label>
+
+        <!-- Extras -->
+        <h3>Extras :</h3>
+        <label class="extra">
+          <input type="checkbox" class="extra-checkbox" data-price="2" />
+          <span class="text">
+            <span class="name">Whipped Cream</span>
+            <span class="price">+ 2,00 €</span>
+          </span>
+        </label>
+        <label class="extra">
+          <input type="checkbox" class="extra-checkbox" data-price="3" />
+          <span class="text">
+            <span class="name">Ice Cream</span>
+            <span class="price">+ 3,00 €</span>
+          </span>
+        </label>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="bottom-bar">
+        <div><strong>Total Price: <span id="totalPriceDisplay">5,00 €</span></strong></div>
+        <div class="quantity-controls">
+          <button id="decrease">-</button>
+          <span id="quantity">1</span>
+          <button id="increase">+</button>
+        </div>
+      </div>
+      <button id="orderButton" class="order-button">Order</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
