@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #333;
+}
+
+/*------header n nav--------*/
+
+.header {
+  padding: 1rem 2rem;
+  background: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  gap: 1.5rem;
+  display: flex;
+  justify-content: right;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #ff6a00;
+  transition: width 0.5s ease;
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/*---------hero----------*/
+
+.hero {
+  height: 45vh;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+/*--------OHJELMAKALENTERI ---------*/
+
+.calendar {
+  gap: 1rem;
+  padding: 2rem;
+  display: flex;
+}
+
+.day-card {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.day-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.artist {
+  margin: 0.25rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.artist .time {
+  display: inline-block;
+  width: 3.5rem;
+  margin-right: 0.5rem;
+  font-weight: bold;
+  color: #555;
+  text-align: right;
+}
+
+/*--------LIPPUPAKETIT-------*/
+
+.tickets {
+  gap: 1rem;
+  padding: 2rem;
+  display: flex;
+}
+
+.ticket-card {
+  padding: 1.5rem;
+  border: 2px solid #ccc;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.ticket-card.vip {
+  border-color: gold;
+  order: -1;
+}
+
+.ticket-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.ticket-card p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.ticket-card ul {
+  list-style: disc inside;
+}
+
+.ticket-card:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+/*-----SIJAINTI------*/
+
+.location {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: center;
+}
+
+.map {
+  flex: 2;
+}
+
+.map img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.address {
+  flex: 3;
+}
+
+.address h2 {
+  margin-bottom: 0.5rem;
+}
+
+/*-----FOOTER-----*/
+
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background: #222;
+  color: #fff;
+}
+
+.social {
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+
+.social a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social a:hover {
+  color: #dbd9d3;
+}
+
+/*-----grid-----*/
+
+.gallery .grid {
+  display: grid;
+  gap: 10px;
+}
+
+.gallery .grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Image 1 spans 2 rows */
+.gallery .grid img:nth-child(1) {
+  grid-row: span 2;
+  grid-column: 1;
+}
+
+/* Image 3 spans 2 columns in row 1 */
+.gallery .grid img:nth-child(3) {
+  grid-row: 1;
+  grid-column: 3 / span 2;
+}
+/* Image 5 spans 2 columns in row 2 */
+.gallery .grid img:nth-child(5) {
+  grid-row: 2;
+  grid-column: 2 / span 2;
+}
+/* Image 6 spans 2 columns in row 2 and row 3 */
+.gallery .grid img:nth-child(6) {
+  grid-area: 2 / 4 / 4 / 6; /* row 2 to 4, col 4 to 6 */
+}
+
+.gallery {
+  background-color: white;
+  padding: 20px; /* Creates spacing inside the frame */
+  margin: 2rem auto; /* Space around the frame */
+  max-width: 1200px; /* Optional: limits frame width */
+  border: 5px solid white; /* White border - stands out on dark background */
+}
