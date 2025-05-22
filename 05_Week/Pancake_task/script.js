@@ -69,9 +69,33 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    const totalPrice = totalPriceEl.textContent; // Get the final price from the banner
+    //final price from the banner
+    const totalPrice = totalPriceEl.textContent;
 
-    // Display order summary in the popup
+    // PART 3: Create and store the order object
+    const order = {
+      id: Date.now(),
+      customerName: name,
+      selectedPancake: selectedType,
+      toppings: selectedToppings ? selectedToppings.split(", ") : [],
+      extras: selectedExtras ? selectedExtras.split(", ") : [],
+      deliveryMethod: deliveryText,
+      totalPrice: parseFloat(totalPriceEl.textContent.replace(",", ".")),
+      status: "waiting",
+    };
+
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+    orders.push(order);
+    localStorage.setItem("orders", JSON.stringify(orders));
+
+    // reset the form for a new order
+    form.reset(); // clear all form inputs
+    toppings.length = 0; // clear toppings array
+    extras.length = 0; // clear extras array
+
+    calculateTotal(); // recalculate price to reset display
+
+    // display order summary in the popup
     orderSummaryEl.innerHTML = `
       <h3>Order Summary</h3>
       <p><strong>Name:</strong> ${name}</p>
@@ -82,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <p><strong>Total price:</strong> ${totalPrice}</p>
     `;
 
-    // Open the popup
+    // open the popup
     document.getElementById("orderSummaryModal").style.display = "block";
   }
 
@@ -90,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("change", function (e) {
     const target = e.target;
 
-    // Handle topping changes
+    // handle topping changes
     if (target.matches(".topping")) {
       if (target.checked) {
         toppings.push(target);
@@ -102,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    // Handle extra changes
+    // handle extra changes
     if (target.matches(".extra")) {
       if (target.checked) {
         extras.push(target);
@@ -114,24 +138,30 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    // Recalculate total price
+    // recalculate total price
     calculateTotal();
   });
 
-  // Show order summary when button is clicked
+  // show order summary when button is clicked. NAME needed !
   document
     .getElementById("showOrderSummaryButton")
     .addEventListener("click", function () {
+      const nameInput = document.getElementById("customerName");
+      if (!nameInput.value.trim()) {
+        alert("Please enter your name before proceeding.");
+        nameInput.focus();
+        return;
+      }
       showOrderSummary();
     });
 
-  // Close the modal when the close button is clicked
+  // close the modal when the close button is clicked
   document
     .getElementById("closeModalButton")
     .addEventListener("click", function () {
       document.getElementById("orderSummaryModal").style.display = "none";
     });
 
-  // Initial price calculation
+  // initial price calculation
   calculateTotal();
 });
