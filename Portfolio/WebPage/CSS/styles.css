@@ -9,6 +9,8 @@ html {
   scroll-behavior: smooth;
 }
 
+/*------- header navigation -------*/
+
 .header {
   padding: 10px 7rem;
   display: flex;
@@ -171,7 +173,7 @@ nav ul li a:hover::after {
   font-size: 15px;
   color: #b2b2b2;
 }
-
+/*--if someone has motionsicness mode on their browser it will reduce motion--*/
 @media (prefers-reduced-motion: reduce) {
   .firstPage::before {
     animation: none;
@@ -247,7 +249,6 @@ nav ul li a:hover::after {
   border-radius: 12px;
   width: 300px;
   text-align: center;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
   min-height: 350px;
   transition: box-shadow 1s ease;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.3), 0 0 48px rgba(0, 0, 0, 0); /* transparent glow layer */
@@ -348,7 +349,7 @@ nav ul li a:hover::after {
   margin-bottom: 10px;
 }
 
-/*---- work page ----*/
+/*--------- work page ---------*/
 
 .workPage {
   min-height: 100vh;
@@ -467,7 +468,30 @@ nav ul li a:hover::after {
   font-size: 14px;
 }
 
-/*---- contact page ----*/
+/*--------project link--------*/
+
+.projectLink {
+  margin-top: 50px;
+}
+
+.projectLink p {
+  margin-top: 9px;
+  font-size: 15px;
+}
+
+.projectLink a {
+  font-size: 25px;
+  color: #d0d0d0;
+  transition: 0.3s ease;
+}
+
+.projectLink a:hover {
+  color: #fff;
+  text-shadow: 0 0 6px #fff, 0 0 12px #fff;
+  transform: scale(1.1);
+}
+
+/*----------- contact page -----------*/
 
 .contactPage {
   height: 92vh;
@@ -559,7 +583,7 @@ nav ul li a:hover::after {
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
 }
 
-/*---- footer ----*/
+/*------------ footer -----------*/
 
 .footer {
   padding: 10px 7rem;
@@ -569,7 +593,9 @@ nav ul li a:hover::after {
   padding: 10px;
 }
 
-/*------ media for small screens --------*/
+/*------------ translate stuff --------------*/
+
+/*------------ media for small screens ----------*/
 
 @media (max-width: 1100px) {
   .header {
@@ -633,6 +659,7 @@ nav ul li a:hover::after {
 
   .firstPage p {
     font-size: 14px;
+    text-align: center;
   }
 
   .aboutPage {

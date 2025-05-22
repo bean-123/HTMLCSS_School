@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Exo 2", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*-----projects-----*/
+
+.schoolProjects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3a3a3a;
+  padding-top: 70px;
+  padding-bottom: 30px;
+  min-height: 100vh;
+}
+
+.schoolProjects h1 {
+  font-size: 40px;
+  margin-top: 50px;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(120deg, #9a9a9a, #c0c0c0, #e0e0e0, #b0b0b0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.schoolProjects h1::after {
+  content: "";
+  position: absolute;
+  left: 50%; /* Start from the center */
+  transform: translateX(-50%); /* Center the line */
+  bottom: -6px;
+  width: 40%;
+  height: 2px;
+  background: linear-gradient(120deg, #9a9a9a, #c0c0c0, #e0e0e0, #b0b0b0);
+  background-size: 200% 100%;
+  box-shadow: 0 0 10px rgba(165, 197, 229, 0.3);
+}
