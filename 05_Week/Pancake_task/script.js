@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const name = document.getElementById("customerName").value;
     const selectedType = typeSelect.selectedOptions[0].textContent;
 
-    // Get selected toppings and extras (correctly extracting label text)
+    // Get selected toppings and extras
     const selectedToppings = toppings
       .map((topping) => {
         const label = topping.closest("label");
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    //final price from the banner
+    // Final price from the banner
     const totalPrice = totalPriceEl.textContent;
 
     // PART 3: Create and store the order object
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
     orders.push(order);
     localStorage.setItem("orders", JSON.stringify(orders));
 
-    // reset the form for a new order
+    // reset the form for a new order (my own thing, task didnt ask to do this but it looks better)
     form.reset(); // clear all form inputs
     toppings.length = 0; // clear toppings array
     extras.length = 0; // clear extras array
