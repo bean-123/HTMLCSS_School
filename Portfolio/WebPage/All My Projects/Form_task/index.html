@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../Form_task/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form task</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nova+Mono&family=Poppins:wght@200;300;400;500;700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    />
+  </head>
+  <body>
+    <!---------- Form ----------->
+    <section class="formBox">
+      <h1>Sign Up</h1>
+      <p class="headText">It's free and only takes a minute</p>
+
+      <form>
+        <div class="inputField" id="inputField">
+          <label for="name">First name</label><br />
+          <input type="text" id="name" inputmode="name" required />
+        </div>
+
+        <div class="inputField">
+          <label for="lname">Last name</label><br />
+          <input type="text" id="lname" inputmode="name" required />
+        </div>
+
+        <div class="inputField">
+          <label for="email">Email</label><br />
+          <input type="text" id="email" inputmode="email" required />
+        </div>
+
+        <div class="inputField">
+          <label for="password">Password</label><br />
+          <input type="text" id="password" inputmode="name" required />
+        </div>
+
+        <div class="inputField">
+          <label for="confirm">Confirm password</label><br />
+          <input type="text" id="confirm" inputmode="name" required />
+        </div>
+        <div class="buttonWrap">
+          <button type="submit">SIGN UP</button>
+        </div>
+      </form>
+      <div class="smallText">
+        <p>
+          By clicking the Sign Up button, you agree to <br />
+          our <a href="#">Terms & Conditions</a> and
+          <a href="#">Privacy Policy</a>
+        </p>
+      </div>
+    </section>
+
+    <!--------- footer ----------->
+    <p class="footer">Already have an account? <a href="#">Login Here</a></p>
+  </body>
+</html>
