@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Exo 2", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #3a3a3a;
+  color: #d0d0d0;
+}
+
+.schoolProjects {
+  min-height: 100vh;
+  padding: 80px 40px 40px;
+  text-align: center;
+}
+
+.schoolProjects h1 {
+  font-size: 3rem;
+  margin-bottom: 70px;
+  background: linear-gradient(120deg, #9a9a9a, #c0c0c0, #e0e0e0, #b0b0b0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.schoolProjects h1::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(120deg, #9a9a9a, #c0c0c0, #e0e0e0, #b0b0b0);
+  box-shadow: 0 0 10px rgba(165, 197, 229, 0.3);
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.projectCard {
+  background-color: #2a2a2a;
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(200, 200, 255, 0.3);
+}
+
+.projectCard img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #444;
+}
+
+.projectContent {
+  padding: 20px;
+  text-align: left;
+}
+
+.projectContent h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #bbbbbb, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.projectContent p {
+  font-size: 0.95rem;
+  color: #c0c0c0;
+}
+
+@media (max-width: 600px) {
+  .schoolProjects {
+    padding: 60px 20px;
+  }
+
+  .projectContent h2 {
+    font-size: 1.2rem;
+  }
+}
