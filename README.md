@@ -18,6 +18,7 @@
 
 - Pancake task
 - Created a page with localstorage
+- Live site: https://bean-123.github.io/Pancake-task/
 
 ## 06 Week
 
