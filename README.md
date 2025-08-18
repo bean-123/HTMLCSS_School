@@ -22,8 +22,16 @@
 
 ## 06 Week
 
+- Flex box task: learning to use flex box on css
+
 ## 07 Week
+
+- Simple 8 ball page
 
 ## Pancake Project
 
+- https://github.com/bean-123/Pancake-task
+
 ## Portofolio Project
+
+- Created a programmer portfolio
