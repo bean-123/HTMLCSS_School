@@ -1,1 +1,1 @@
-# HTMLCSS_School
+# HTML-CSS-School-tasks
