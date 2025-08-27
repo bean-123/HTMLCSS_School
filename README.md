@@ -1,3 +1,6 @@
+[![Language](https://img.shields.io/badge/language-HTML-orange)](https://developer.mozilla.org/en-US/docs/Web/HTML) 
+[![Language](https://img.shields.io/badge/language-CSS-blue)](https://developer.mozilla.org/en-US/docs/Web/CSS) 
+
 # HTML & CSS School – Tasks Repository
 
 Welcome to the HTML & CSS School repository! This collection houses a series of HTML and CSS tasks and exercises completed during my studies at Business College Helsinki. The tasks span multiple weeks, each focusing on different aspects of web development, from basic styling to more advanced layouts and interactivity.
